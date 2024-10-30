@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión / Registro - Peluquería Original</title>
+    <style>
+        /* Reset de estilos básicos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 450px; /* Aumentar ancho */
+            padding: 2rem;
+            position: relative;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: #f07070;
+        }
+
+        .toggle-button {
+            background: none;
+            border: none;
+            color: #4A4A4A;
+            font-size: 1rem;
+            cursor: pointer;
+            display: block;
+            margin: 1rem auto;
+            text-align: center;
+            text-decoration: underline; /* Subrayado para hacer más visible el texto */
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem; /* Espacio mayor entre los grupos de formulario */
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.75rem; /* Aumentar el padding para hacer los campos más grandes */
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem; /* Aumentar el tamaño de la fuente */
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 0.75rem; /* Aumentar el padding del botón */
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1rem; /* Aumentar el tamaño de la fuente del botón */
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #ff4500;
+        }
+
+        /* Spinner */
+        .spinner {
+            display: none;
+            border: 8px solid #f3f3f3; /* Color de fondo */
+            border-top: 8px solid #ff6347; /* Color del spinner */
+            border-radius: 50%;
+            width: 40px; /* Ancho del spinner */
+            height: 40px; /* Altura del spinner */
+            animation: spin 1s linear infinite;
+            position: absolute;
+            top: 50%; /* Centrado verticalmente */
+            left: 50%; /* Centrado horizontalmente */
+            transform: translate(-50%, -50%); /* Para centrar completamente */
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Animaciones de mostrar/ocultar */
+        .fade {
+            transition: opacity 0.5s ease;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .visible {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Formulario de Registro -->
+        <div id="registerForm" class="fade visible">
+            <h2>Registro</h2>
+            <form>
+                <div class="form-group">
+                    <label for="regEmail">Correo Electrónico</label>
+                    <input type="email" id="regEmail" placeholder="Ingresa tu correo" required>
+                </div>
+                <div class="form-group">
+                    <label for="regPassword">Contraseña</label>
+                    <input type="password" id="regPassword" placeholder="Crea una contraseña" required>
+                </div>
+                <div class="form-group">
+                    <label for="regConfirmPassword">Confirmar Contraseña</label>
+                    <input type="password" id="regConfirmPassword" placeholder="Confirma tu contraseña" required>
+                </div>
+                <button type="submit" class="submit-btn">Registrar</button>
+            </form>
+            <button class="toggle-button" onclick="toggleForms()">¿Ya tienes cuenta? Iniciar sesión</button>
+        </div>
+
+        <!-- Formulario de Inicio de Sesión -->
+        <div id="loginForm" class="fade hidden">
+            <h2>Iniciar Sesión</h2>
+            <form onsubmit="showSpinner(event)">
+                <div class="form-group">
+                    <label for="loginEmail">Correo Electrónico</label>
+                    <input type="email" id="loginEmail" placeholder="Ingresa tu correo" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Contraseña</label>
+                    <input type="password" id="loginPassword" placeholder="Ingresa tu contraseña" required>
+                </div>
+                <button type="submit" class="submit-btn">Iniciar Sesión</button>
+            </form>
+            <button class="toggle-button" onclick="toggleForms()">¿No tienes cuenta? Regístrate</button>
+        </div>
+        
+        <!-- Spinner -->
+        <div class="spinner" id="spinner"></div>
+    </div>
+
+    <script>
+        function toggleForms() {
+            const registerForm = document.getElementById('registerForm');
+            const loginForm = document.getElementById('loginForm');
+
+            if (registerForm.classList.contains('visible')) {
+                registerForm.classList.remove('visible');
+                registerForm.classList.add('hidden');
+                loginForm.classList.remove('hidden');
+                loginForm.classList.add('visible');
+            } else {
+                registerForm.classList.remove('hidden');
+                registerForm.classList.add('visible');
+                loginForm.classList.remove('visible');
+                loginForm.classList.add('hidden');
+            }
+        }
+
+        function showSpinner(event) {
+            event.preventDefault(); // Evita el envío del formulario
+            const spinner = document.getElementById('spinner');
+            spinner.style.display = 'block'; // Muestra el spinner
+            
+            // Simulación de un proceso de inicio de sesión
+            setTimeout(() => {
+                spinner.style.display = 'none'; // Oculta el spinner después de un tiempo
+                alert('Inicio de sesión simulado'); // Simula un mensaje de éxito
+            }, 2000); // Espera 2 segundos
+        }
+    </script>
+</body>
+</html>
