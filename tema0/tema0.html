@@ -1,40 +1,218 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tema 0</title>
+    <style>
+        /* Establecemos un reset básico para evitar márgenes y paddings indeseados */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #3a3a3a;
+            margin-bottom: 30px;
+        }
+
+        /* Detalles y resúmenes */
+        details {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        details:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        summary {
+            font-size: 1.5rem;
+            font-weight: bold;
+            cursor: pointer;
+            color: #3a3a3a;
+            padding: 10px;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        summary:hover {
+            background-color: #e0e0e0;
+        }
+
+        /* Estilo de los enlaces dentro de los detalles */
+        a {
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 8px 0;
+            display: inline-block;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #004a99;
+            text-decoration: underline;
+        }
+
+        /* Estilo de los enlaces centrados */
+        .centered {
+            text-align: center;
+            display: block;
+            margin: 10px auto;
+        }
+
+        /* Contenedor para el contenido */
+        .content-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+       /* Estilos para el footer */
+       footer {
+            background-color: #0056b3;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            color: #ff07c9;
+        }
+         /* Estilos del navbar */
+         nav {
+            position: sticky;
+            top: 0;
+            width: 100%;
+            background: linear-gradient(45deg, #063df5, #00e1ff);
+            padding: 15px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            transition: background 0.5s ease;
+        }
+
+        nav:hover {
+            background: linear-gradient(45deg, #00e1ff, #001aff);
+        }
+
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .navbar-brand {
+            font-size: 2rem;
+            color: #fff;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .navbar-menu {
+            display: flex;
+            gap: 25px;
+        }
+
+        .navbar-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            text-transform: capitalize;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .navbar-menu a:hover {
+            transform: scale(1.1);
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+    </style>
 </head>
 <body>
-             <details>
-              
-                  
-                    <summary>
-                        Practicas
-                    </summary>  
-                    <a href="portadatrabajos.png" aling="center"> Portada de trabajos </a><br>
-                    <a href="git_page_repositorio.pdf">Como crear un repositorio</a><br>
-                    <a href="herramientas%20_de_desarrollo_firefox_chrome.pdf" aling="center"> Herramientas de desarrllo de firefox edge y chrome </a><br>
-                    <a href="htmltips2.html" aling="center"> HTML tips</a><br><!--ni este-->
+    <nav>
+        <h1>Tema 0 - Recursos y Herramientas</h1>
+        <div class="navbar-container">
+            <div class="navbar-menu">
+                <a href="tema0.html">0</a>
+                <a href="../tema1/tema1.html">1</a>
+                <a href="../tema2/tema2.html">2</a>
+                <a href="../tema3/tema3.html">3</a>
+                <a href="../tema4/tema4.html">4</a>
+                <a href="../tema5/tema5.html">5</a>
+                <a href="../tema6/tema6.html">6</a>
+            </div>
+        </div>
+    </nav>
+    <br>
+    <br>
+    
 
-                    
-                
-                
-            </details>
-            <details>
-                <summary>
-                  Documentacion
-                </summary>
-                <a href="https://markodenic.com/html-tips/" aling="center"> HTML tips Documentacion</a><br>
-                <a href="https://learn.microsoft.com/es-es/microsoft-edge/devtools-guide-chromium/overview" aling="center"> Devtools edge</a><br>
-                <a href="https://developer.chrome.com/docs/devtools/overview?hl=es-419" aling="center"> Devtools chrome</a><br>
-                <a href="https://www.mozilla.org/es-ES/firefox/developer/" aling="center"> Devtools firefox developer</a><br>
-            </details>
-         <details>
-                <summary>
-                    <a>Herramientas</a><br>
-                </summary>
-            </details>
-         </details>
+    <div class="content-container">
+
+        <!-- Sección Practicas -->
+        <details>
+            <summary>Practicas</summary>
+            <a href="portadatrabajos.png" class="centered">Portada de trabajos</a>
+            <a href="git_page_repositorio.pdf" class="centered">Cómo crear un repositorio</a>
+            <a href="herramientas%20_de_desarrollo_firefox_chrome.pdf" class="centered">Herramientas de desarrollo de Firefox, Edge y Chrome</a>
+            <a href="htmltips2.html" class="centered">HTML Tips</a>
+        </details>
+
+        <!-- Sección Documentacion -->
+        <details>
+            <summary>Documentación</summary>
+            <a href="https://markodenic.com/html-tips/" class="centered">HTML Tips Documentación</a>
+            <a href="https://learn.microsoft.com/es-es/microsoft-edge/devtools-guide-chromium/overview" class="centered">DevTools Edge</a>
+            <a href="https://developer.chrome.com/docs/devtools/overview?hl=es-419" class="centered">DevTools Chrome</a>
+            <a href="https://www.mozilla.org/es-ES/firefox/developer/" class="centered">DevTools Firefox Developer</a>
+        </details>
+
+        <!-- Sección Herramientas (vacía por ahora) -->
+        <details>
+            <summary>Herramientas</summary>
+            <!-- Puedes agregar enlaces aquí más tarde -->
+        </details>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Lorena Martin Piñero. Todos los derechos reservados.</p>
+        <p><a href="mailto:lorena.marpin@educa.jcyl.es">Contáctame</a></p>
+    </footer>
+
 </body>
 </html>

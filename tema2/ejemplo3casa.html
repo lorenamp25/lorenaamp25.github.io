@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+ 
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f8fa;
+            color: #333;
+        }
+ 
+        .header {
+            background-color: #dd5abcef;
+            color: #fff;
+            padding: 40px;
+            text-align: center;
+        }
+ 
+        .header h1 {
+            margin: 0;
+            font-size: 48px;
+        }
+ 
+        .header p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+ 
+        .nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+ 
+        .nav a {
+            color: #fff;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+ 
+        .nav a:hover {
+            background-color: #d45cec;
+        }
+ 
+        .container {
+            display: flex;
+            margin-top: 30px;
+            padding: 0 15px;
+        }
+ 
+        .main-content {
+            flex: 3;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+            margin-right: 20px;
+        }
+ 
+        .sidebar {
+            flex: 1;
+            background-color: #f1f4f7;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+        }
+ 
+        .card {
+            background-color: #ffffff;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 12px rgba(122, 118, 118, 0.1);
+            border-radius: 8px;
+        }
+ 
+        .fakeimg {
+            background-color: #d0d0d0;
+            width: 100%;
+            padding: 100px 0;
+            text-align: center;
+            border-radius: 6px;
+            font-size: 16px;
+            color: #666;
+        }
+ 
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #d46dad;
+            color: #fff;
+            margin-top: 30px;
+            border-top: 5px solid #df57bd;
+        }
+ 
+        /* Media query for smaller screens */
+        @media (max-width: 800px) {
+            .container {
+                flex-direction: column;
+            }
+ 
+            .main-content,
+            .sidebar {
+                width: 100%;
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+ 
+<body>
+    <div class="header">
+        <h1>2ºDAW LORENA MARTIN PIÑERO</h1>
+        <p>EJERCICIO PARA CASA</p>
+    </div>
+ 
+    <div class="nav">
+        <a href="#">MENU</a>
+        <a href="#">CONTACTO</a>
+        <a href="#">SERVICIOS</a>
+    </div>
+ 
+    <div class="container">
+        <div class="main-content">
+            <div class="card">
+                <h2>ARTICULO 1</h2>
+                <h5>DHFGHDFGHDFGHFDGHD</h5>
+                <div class="fakeimg">Image Placeholder</div>
+                <p>Some introductory text about the article..</p>
+                <p>LOREMP IMPUMS</p>
+            </div>
+            <div class="card">
+                <h2>ARTICULO 2</h2>
+                <h5>Details, June 20, 2024</h5>
+                <div class="fakeimg">Image Placeholder</div>
+                <p>TDHNSRTHGSRTHRDTH</p>
+                <p>Some introductory text about the article..</p>
+            </div>
+            <div class="card">
+                <h2>ARTICULO 3</h2>
+                <h5>Details, June 20, 2024</h5>
+                <div class="fakeimg">Image Placeholder</div>
+                <p>TDHNSRTHGSRTHRDTH</p>
+                <p>Some introductory text about the article..</p>
+            </div>
+            <div class="card">
+                <h2>ARTICULO 4</h2>
+                <h5>Details, June 20, 2024</h5>
+                <div class="fakeimg">Image Placeholder</div>
+                <p>TDHNSRTHGSRTHRDTH</p>
+                <p>Some introductory text about the article..</p>
+            </div>
+        </div>
+ 
+        <div class="sidebar">
+            <div class="card">
+                <h2>About Me</h2>
+                <div class="fakeimg">Image Placeholder</div>
+                <p>Some brief information about me..</p>
+            </div>
+            <div class="card">
+                <h2>About Me</h2>
+                <div class="fakeimg">Image Placeholder</div>
+                <p>Some brief information about me..</p>
+            </div>
+            <div class="card">
+                <h3>Popular Posts</h3>
+                <div class="fakeimg">Image</div>
+                <div class="fakeimg">Image</div>
+                <div class="fakeimg">Image</div>
+            </div>
+            <div class="card">
+                <h3>INFORMACION SOBRE MI</h3>
+                <p>Links or information about how to follow me..</p>
+            </div>
+        </div>
+    </div>
+ 
+    <div class="footer">
+        <h2>Footer</h2>
+        <p>Some footer information &copy; 2024</p>
+    </div>
+</body>
+ 
+</html>

@@ -1,117 +1,265 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Tema 1</title>
-        
-    </head>
-    <body>
-            <h1>Tema 1-> Planificación de interfaces graficas</h1><hr>
-             <details>
-                <summary>
-                   <b>Practicas</b>
-                </summary>
-                            <a href="Resumenes_paginas_fuentes.pdf">Resumen de las 2  paginas de fuentes</a><br>
-            </details>
-            <details>
-                <summary>
-                    <b>Documentación</b>
-                </summary>    
-                        <a href="Balsamiq.pdf">Balsamiq</a><br>
-                        <a href="planificacion de una pagina web.pdf">Planificacion de una pagina web</a><br>
-                        <a href="FIGMA_EXPLICADO.pdf">Figma capturas</a><br>
-                        <a href="FIGMA_DOCUMENTACION.pdf">Figma documentacion</a>
-                        <a href="https://designsystem.gov.ae/docs/components">Componentes</a>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 1 - Planificación de Interfaces Gráficas</title>
+    <style>
+        /* Reset de márgenes y paddings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-            </details>
-            <details>
-                <summary>
-                    <b>Herramientas</b>
-                </summary>
-                        <ul><H1>COLORES</H1>
-                            <li>
-                                <a href="http://www.color-wheel-pro.com/.">Colores</a><br> 
-                            </li>
-                            <li>
-                                <a href="http://www.colorlovers.com/palettes/add">Colores paletas</a><br>
-                            </li>
-                            <li>
-                                <a href="https://colorbox.io/">Color box</a><br>
-                            </li>
-                            <li>
-                                <a href="https://material.io/resources/color/#!/?view.left=0&view.right=0&secondary.color=FFA726&primary.color=5D4037&secondary.text.color=424242&primary.text.color=FF3D00">Herramienta Google color</a><br>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
 
-                            </li>
-                            <li>
-                                <a href="https://material.io/color/#!/?view.left=0&view.right=0">Herramienta para elegir colores</a><br> 
-                            </li>
-                            <li>
-                                <a href="https://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF">Paleton</a><br>
-                            </li>
-                            <li>
-                               <a href="https://colorhunt.co/">Otra herramienta colorhunt</a><br>
-                            </li>
-                            <li>
-                                <a href=" https://www.figma.com/design/CxVcrFgZHyLaIUyoZvSG0p/Bootstrap-5-UI-Kit-(Community)?node-id=3787-1030&node-type=frame&t=Kfc2gkOYNGIK9hXp-0">kit bootstrap</a><br>
-                            </li>
-                            <li>
-                                <a href="https://fonts.google.com/knowledge/readability_and_accessibility/how_type_influences_readability">Fuentes Google</a><br>
-                            </li>
-                        </ul>
-                        <ul><h1>FUENTES</h1>
-                            <li>
-                                    <ul>
-                                        <li>
-                                           <a href=" https://developers.google.com/fonts/">Google Font</a><br>
-                                        </li>   
-                                        <li>
-                                           <a href="https://developers.google.com/fonts/docs/getting_started?hl=es-419#top_of_page">Usar api de google font</a><br>
-                                        </li>  
-                                        <li> 
-                                           <a href="https://fonts.google.com/">fuentes disponibles de google</a> <br>
-                                        </li>   
-                                        
-                                        <li> 
-                                            <a href="https://getbootstrap.com/docs/4.1/content/typography/">Tipografia Bootstrap</a><br>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.w3schools.com/css/css_font.asp">Fuentes W3schools</a><br>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.w3schools.com/cssref/css3_pr_font-face_rule.asp">@font-face</a><br>
-                                        </li>    
-                                            
-                                       
-                                        
-                                    </ul>
-                                    
-                            </li>
-                            
-                        </ul>
-                        <ul><h1>COMPONENTES</h1>
-                            <li>
-                             <a href="https://www.figma.com/community/file/876022745968684318">Componentes Bootstrap para figma</a><br>
-                            </li>
-                            <li>
-                                <a href="https://www.figma.com/community/file/912837788133317724">Componentes Material para figma</a><br>
-                            </li>
-                    </ul>
-                    <ul><h1>GUIAS DE ESTILOS</h1>
-                        <li>
-                            <a href="https://designsystem.gov.ae/docs/components">Arab Emirates </a><br>
-                        </li>
-                        <li>
-                            <a href="http://www.jcyl.es/junta/guia/guia-estilos.html">Junta de castilla y leon</a><br>
-                        </li>
-                        <li> 
-                            <a href="https://www.starbucks.com/static/reference/styleguide/">Starbucks</a><br>
-                        </li>
-                        <li>    
-                            <a href="https://www.ox.ac.uk/public-affairs/style-guide/digital-style-guide?wssl=1#">Universidad de oxford</a><br>
-                        </li>
-                    </ul>
-            </details>
-         
-    </body>
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+
+        hr {
+            border: 1px solid #eee;
+            margin: 30px 0;
+        }
+
+        details {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        details:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        summary {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: #34495e;
+            cursor: pointer;
+            padding: 10px;
+            background-color: #ecf0f1;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        summary:hover {
+            background-color: #bdc3c7;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+            font-size: 1.1rem;
+            display: block;
+            margin: 8px 0;
+            padding: 5px 0;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+
+        ul {
+            margin-top: 15px;
+        }
+
+        h1 + ul {
+            margin-top: 25px;
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        ul h1 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        li a {
+            font-size: 1rem;
+        }
+
+        .centered {
+            text-align: center;
+        }
+
+        footer {
+            background-color: #0056b3;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            color: #ff07c9;
+        }
+        nav {
+            position: sticky;
+            top: 0;
+            width: 100%;
+            background: linear-gradient(45deg, #063df5, #00e1ff);
+            padding: 15px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            transition: background 0.5s ease;
+            
+        }
+
+        nav:hover {
+            background: linear-gradient(45deg, #00e1ff, #001aff);
+        }
+
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .navbar-brand {
+            font-size: 2rem;
+            color: #fff;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .navbar-menu {
+            display: flex;
+            gap: 25px;
+        }
+
+        .navbar-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            text-transform: capitalize;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .navbar-menu a:hover {
+            transform: scale(1.1);
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>Tema 1 - Planificación de Interfaces Gráficas</h1>
+        <div class="navbar-container">
+            
+            <div class="navbar-menu">
+                <a href="../tema0/tema0.html">0</a>
+                <a href="../tema1/tema1.html">1</a>
+                <a href="../tema2/tema2.html">2</a>
+                <a href="../tema3/tema3.html">3</a>
+                <a href="../tema4/tema4.html">4</a>
+                <a href="../tema5/tema5.html">5</a>
+                <a href="../tema6/tema6.html">6</a>
+            </div>
+        </div>
+    </nav>
+    
+    <hr>
+
+    <!-- Sección de Practicas -->
+    <details>
+        <summary><b>Practicas</b></summary>
+        <a href="Resumenes_paginas_fuentes.pdf">Resumen de las 2 páginas de fuentes</a>
+    </details>
+
+    <!-- Sección de Documentación -->
+    <details>
+        <summary><b>Documentación</b></summary>
+        <a href="Balsamiq.pdf">Balsamiq</a>
+        <a href="planificacion de una pagina web.pdf">Planificación de una página web</a>
+        <a href="FIGMA_EXPLICADO.pdf">Figma capturas</a>
+        <a href="FIGMA_DOCUMENTACION.pdf">Figma documentación</a>
+        <a href="https://designsystem.gov.ae/docs/components">Componentes</a>
+    </details>
+
+    <!-- Sección de Herramientas -->
+    <details>
+        <summary><b>Herramientas</b></summary>
+
+        <ul>
+            <h1>COLORES</h1>
+            <li><a href="http://www.color-wheel-pro.com/.">Colores</a></li>
+            <li><a href="http://www.colorlovers.com/palettes/add">Colores paletas</a></li>
+            <li><a href="https://colorbox.io/">Color box</a></li>
+            <li><a href="https://material.io/resources/color/#!/?view.left=0&view.right=0&secondary.color=FFA726&primary.color=5D4037&secondary.text.color=424242&primary.text.color=FF3D00">Herramienta Google color</a></li>
+            <li><a href="https://material.io/color/#!/?view.left=0&view.right=0">Herramienta para elegir colores</a></li>
+            <li><a href="https://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF">Paleton</a></li>
+            <li><a href="https://colorhunt.co/">Otra herramienta colorhunt</a></li>
+            <li><a href="https://www.figma.com/design/CxVcrFgZHyLaIUyoZvSG0p/Bootstrap-5-UI-Kit-(Community)?node-id=3787-1030&node-type=frame&t=Kfc2gkOYNGIK9hXp-0">Kit Bootstrap</a></li>
+            <li><a href="https://fonts.google.com/knowledge/readability_and_accessibility/how_type_influences_readability">Fuentes Google</a></li>
+        </ul>
+
+        <ul>
+            <h1>FUENTES</h1>
+            <li><a href="https://developers.google.com/fonts/">Google Font</a></li>
+            <li><a href="https://developers.google.com/fonts/docs/getting_started?hl=es-419#top_of_page">Usar API de Google Fonts</a></li>
+            <li><a href="https://fonts.google.com/">Fuentes disponibles de Google</a></li>
+            <li><a href="https://getbootstrap.com/docs/4.1/content/typography/">Tipografía Bootstrap</a></li>
+            <li><a href="https://www.w3schools.com/css/css_font.asp">Fuentes W3schools</a></li>
+            <li><a href="https://www.w3schools.com/cssref/css3_pr_font-face_rule.asp">@font-face</a></li>
+        </ul>
+
+        <ul>
+            <h1>COMPONENTES</h1>
+            <li><a href="https://www.figma.com/community/file/876022745968684318">Componentes Bootstrap para Figma</a></li>
+            <li><a href="https://www.figma.com/community/file/912837788133317724">Componentes Material para Figma</a></li>
+        </ul>
+
+        <ul>
+            <h1>GUÍAS DE ESTILOS</h1>
+            <li><a href="https://designsystem.gov.ae/docs/components">Arab Emirates</a></li>
+            <li><a href="http://www.jcyl.es/junta/guia/guia-estilos.html">Junta de Castilla y León</a></li>
+            <li><a href="https://www.starbucks.com/static/reference/styleguide/">Starbucks</a></li>
+            <li><a href="https://www.ox.ac.uk/public-affairs/style-guide/digital-style-guide?wssl=1#">Universidad de Oxford</a></li>
+        </ul>
+    </details>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 Lorena Martin Piñero. Todos los derechos reservados.</p>
+        <p><a href="mailto:lorena.marpin@educa.jcyl.es">Contáctame</a></p>
+    </footer>
+</body>
 </html>

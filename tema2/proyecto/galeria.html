@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería - Peluquería Original</title>
+    <style>
+        /* Reset de estilos básicos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #bcd8f3;
+            color: #333;
+        }
+
+        /* Estilos del encabezado */
+        header {
+            background-color: #333;
+            padding: 1rem;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Estilos del encabezado */
+        header {
+            background-color: #333;
+            padding: 1rem;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Menú de navegación centrado */
+        nav {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Botón de Iniciar Sesión */
+        .login-btn {
+            background-color: #ff6347;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .login-btn:hover {
+            background-color: #ff4500;
+        }
+
+
+        /* Encabezado de la página */
+        header h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        /* Carrusel de imágenes */
+        .carousel {
+            position: relative;
+            max-width: 80%;
+            margin: 2rem auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            height: 250px; /* Ajustar la altura del carrusel */
+        }
+
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            height: 100%; /* Asegura que ocupe toda la altura del carrusel */
+        }
+
+        .carousel-images img {
+            width: 100%;
+            height: 100%; /* Ajustar para que las imágenes ocupen toda la altura */
+            object-fit: cover; /* Asegura que las imágenes se recorten adecuadamente */
+        }
+
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 1rem;
+            cursor: pointer;
+            font-size: 1.5rem;
+            z-index: 1;
+            border-radius: 5px;
+        }
+
+        .carousel-button.left {
+            left: 10px;
+        }
+
+        .carousel-button.right {
+            right: 10px;
+        }
+
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .indicator {
+            height: 12px;
+            width: 12px;
+            margin: 0 5px;
+            border-radius: 50%;
+            background-color: #bbb;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .indicator.active {
+            background-color: #717171;
+        }
+
+        /* Álbum de fotos */
+        .album {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem auto;
+            max-width: 80%;
+        }
+
+        .album img {
+            width: 100%;
+            height: 200px; /* Ajustar la altura para que todas las imágenes sean del mismo tamaño */
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            object-fit: cover; /* Asegura que las imágenes se recorten adecuadamente */
+        }
+
+        .album img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Estilos del pie de página */
+        footer {
+            padding: 1rem;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+        }
+
+        .socials {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .socials a {
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barra de navegación -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="peluqueria.html">Inicio</a></li>
+                <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <!-- Botón de Iniciar Sesión alineado a la derecha -->
+        <a href="./inicio.html" class="login-btn">Iniciar Sesión</a>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- Encabezado de la página -->
+    <h1 align="center">NUESTRA GALERIA DE FOTOS</h1>
+    <br>
+    <section class="carousel">
+        <button class="carousel-button left" onclick="previousSlide()">❮</button>
+        <div class="carousel-images">
+            <img src="./img/curso-online-profesional-de-peluqueria_l_primaria_1_1543487320.jpg" alt="Corte de cabello">
+            <img src="./img/tratamientocapilar.jpg" alt="Coloración">
+            <img src="./img/tratamientocapilar2.jpg" alt="Tratamiento capilar">
+            <img src="./img/cortepelo.jpg" alt="Peinado 1">
+            <img src="./img/coloracion.jpg" alt="Peinado 2">
+            <img src="./img/curso-online-profesional-de-peluqueria_l_primaria_1_1543487320.jpg" alt="Corte de cabello">
+            <img src="./img/tratamientocapilar.jpg" alt="Coloración">
+            <img src="./img/tratamientocapilar2.jpg" alt="Tratamiento capilar">
+            <img src="./img/cortepelo.jpg" alt="Peinado 1">
+            <img src="./img/coloracion.jpg" alt="Peinado 2">
+            <img src="./img/curso-online-profesional-de-peluqueria_l_primaria_1_1543487320.jpg" alt="Corte de cabello">
+            <img src="./img/tratamientocapilar.jpg" alt="Coloración">
+            <img src="./img/tratamientocapilar2.jpg" alt="Tratamiento capilar">
+            <img src="./img/cortepelo.jpg" alt="Peinado 1">
+            <img src="./img/coloracion.jpg" alt="Peinado 2">
+        </div>
+        <button class="carousel-button right" onclick="nextSlide()">❯</button>
+    </section>
+
+    <!-- Indicadores del carrusel -->
+    <div class="carousel-indicators">
+        <span class="indicator active" onclick="showSlide(0)"></span>
+        <span class="indicator" onclick="showSlide(1)"></span>
+        
+        
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+        <!-- Galería de Videos -->
+<!-- Galería de Videos -->
+<!-- Galería de Video -->
+<!-- Galería de Video -->
+ <h1 align="center">ANUNCIO DE NUESTRA PELUQUERIA</h1>
+<section class="video-gallery" style="display: flex; justify-content: center; margin: 2rem auto; max-width: 80%;">
+    <div style="flex: 1; display: flex; justify-content: center;">
+        <video controls style="width: 1000px; height: 500px; max-height: 1000px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <source src="./img/Anuncio Peluquería Gessbra con Fernando Torres (Teaser Banco Gallego).mp4" type="video/mp4">
+            Tu navegador no soporta la etiqueta de video.
+        </video>
+    </div>
+</section>
+
+
+
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+
+    <h1 align="center">ALGUNOS DE NUESTROS CORTES </h1>
+    <!-- Álbum de fotos -->
+    <section class="album">
+        <img src="./img/pelo1.png" alt="Corte de cabello">
+        <img src="./img/pelo2.webp" alt="Coloración">
+        <img src="./img/pelo3.png" alt="Tratamiento capilar">
+        <img src="./img/pelo4.jpg" alt="Peinado">
+        <img src="./img/pelo5.jpg" alt="Corte de cabello">
+        <img src="./img/pelo6.webp" alt="Coloración">
+        <img src="./img/pelo7.jpeg" alt="Tratamiento capilar">
+        <img src="./img/pelo8.jpg" alt="Peinado">
+        <img src="./img/pelo9.jpg" alt="Peinado">
+        <img src="./img/pelo10.webp" alt="Peinado">
+    </section>
+
+    <!-- JavaScript para el carrusel -->
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-images img');
+        const indicators = document.querySelectorAll('.indicator');
+
+        function showSlide(index) {
+            if (index >= slides.length) {
+                currentSlide = 0;
+            } else if (index < 0) {
+                currentSlide = slides.length - 1;
+            } else {
+                currentSlide = index;
+            }
+            const offset = -currentSlide * 100;
+            document.querySelector('.carousel-images').style.transform = `translateX(${offset}%)`;
+            
+            // Actualizar los indicadores
+            indicators.forEach((indicator, idx) => {
+                indicator.classList.toggle('active', idx === currentSlide);
+            });
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function previousSlide() {
+            showSlide(currentSlide - 1);
+        }
+    </script>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- Pie de página -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Síguenos en nuestras redes sociales:</h3>
+                <ul class="socials">
+                    <li>
+                        <a href="https://www.facebook.com" target="_blank">
+                            <img src="./img/facebook.webp" alt="Facebook" width="80" height="40"> <!-- Icono de Facebook -->
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com" target="_blank">
+                            <img src="./img/instagram.svg" alt="Instagram" width="40" height="40"> <!-- Icono de Instagram -->
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com" target="_blank">
+                            <img src="./img/tweeter.png" alt="Twitter" width="40" height="40"> <!-- Icono de Twitter -->
+                        </a>
+                    </li>
+                </ul>
+            </div>
+    
+            <div class="footer-col">
+                <h3>Información</h3>
+                <ul>
+                    <li><a href="./nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                    <li><a href="./servicios.html">Servicios</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-col">
+                <h3>Contáctanos</h3>
+                <p>Email: contacto@peluqueriaoriginal.com</p>
+                <p>Teléfono: +34 123 456 789</p>
+            </div>
+        </div>
+    </footer>
+    
+    <style>
+    footer {
+        background-color: #333;
+        color: #fff;
+        padding: 2rem 0;
+    }
+    
+    .footer-container {
+        display: flex;
+        justify-content: space-around;
+        max-width: 1200px; /* Ancho máximo del footer */
+        margin: auto; /* Centrar el footer */
+    }
+    
+    .footer-col {
+        flex: 1; /* Hacer que cada columna ocupe el mismo espacio */
+        padding: 0 20px; /* Espaciado interno */
+    }
+    
+    .footer-col h3 {
+        margin-bottom: 1rem; /* Espacio debajo del título */
+        font-size: 1.2rem; /* Tamaño del texto */
+    }
+    
+    .socials {
+        list-style: none;
+        display: flex;
+        justify-content: flex-start; /* Alinear a la izquierda */
+        gap: 1rem;
+        padding: 0; /* Eliminar padding para centrar mejor */
+    }
+    
+    .socials a img {
+        transition: transform 0.3s ease; /* Efecto de transición */
+    }
+    
+    .socials a:hover img {
+        transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+    }
+    
+    .footer-col ul {
+        list-style: none;
+        padding: 0; /* Eliminar padding */
+    }
+    
+    .footer-col ul li {
+        margin-bottom: 0.5rem; /* Espacio entre enlaces */
+    }
+    
+    .footer-col ul li a {
+        color: #fff; /* Color de los enlaces */
+        text-decoration: none; /* Sin subrayado */
+    }
+    
+    .footer-col ul li a:hover {
+        text-decoration: underline; /* Subrayar al pasar el mouse */
+    }
+    </style>
+
+</body>
+</html>

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peluquería Original</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMpKz4rWSD0W2EhtjDqSK6bTBBiXW9aH4c8r6Y" crossorigin="anonymous"> <!-- Asegúrate de incluir esto -->
+    <style>
+        /* Estilos básicos de reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Encabezado */
+        header {
+            background-color: #333;
+            padding: 1rem;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Menú de navegación centrado */
+        nav {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Botón de Iniciar Sesión */
+        .login-btn {
+            background-color: #ff6347;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .login-btn:hover {
+            background-color: #ff4500;
+        }
+
+        /* Banner */
+        #banner {
+            background-image: url('./img/banner.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 4rem 2rem;
+            text-align: center;
+            color: #551d1b;
+        }
+
+        #banner h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        #banner p {
+            font-size: 1.2rem;
+        }
+
+        /* Sección de servicios */
+        #services {
+            padding: 2rem;
+            text-align: center;
+            background-color: #f2f2f2;
+        }
+
+        #services ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1rem 0;
+        }
+
+        #services li {
+            background-color: #bfc9e8;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* Galería */
+        #gallery {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Horarios */
+        #schedule {
+            padding: 2rem;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+        }
+
+        #schedule p {
+            font-size: 1.2rem;
+        }
+
+        /* Formulario de contacto */
+        #contact form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 400px;
+            margin: auto;
+        }
+
+        #contact form input, #contact form button {
+            padding: 0.8rem;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #contact form button {
+            background-color: #333;
+            color: #ffffff;
+            cursor: pointer;
+        }
+
+        /* Estilo del footer */
+        footer {
+            padding: 1rem;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .socials {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            padding: 0; /* Eliminar padding para centrar mejor */
+            margin-top: 0.5rem; /* Añadir margen para separar del texto */
+        }
+
+        .socials a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 1.5rem; /* Tamaño de los iconos */
+        }
+
+        .socials a:hover {
+            color: #ff6347; /* Color al pasar el mouse */
+        }
+        .popup {
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    text-align: center;
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+    <script>
+        document.getElementById('appointmentForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Evitar que el formulario se envíe realmente
+    openPopup(); // Mostrar la ventana emergente
+    this.reset(); // Reiniciar el formulario
+});
+
+function openPopup() {
+    document.getElementById('popup').style.display = 'block';
+}
+
+function closePopup() {
+    document.getElementById('popup').style.display = 'none';
+}
+
+    </script>
+    <header>
+        <!-- Menú de navegación centrado en el encabezado -->
+        <nav>
+            <ul>
+                <li><a href="./nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="./servicios.html">Servicios</a></li>
+                <li><a href="./galeria.html">Galería</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <!-- Botón de Iniciar Sesión alineado a la derecha -->
+        <a href="./inicio.html" class="login-btn">Iniciar Sesión</a>
+    </header>
+
+    <!-- Banner de bienvenida -->
+    <section id="banner">
+        <h1>Bienvenidos a Peluquería Original</h1>
+        <p>Transformamos tu estilo y realzamos tu belleza. ¡Ven y vive una experiencia única!</p>
+    </section>
+
+    <!-- Horarios de apertura -->
+    <section id="schedule">
+        <h2>Horarios de Apertura</h2>
+        <p>Lunes a Viernes: 9:00 AM - 8:00 PM</p>
+        <p>Sábado: 9:00 AM - 5:00 PM</p>
+        <p>Domingo: Cerrado</p>
+    </section>
+
+    <main>
+        <!-- Sección de servicios -->
+        <section id="services">
+            <h2>Servicios</h2>
+            <ul>
+                <li>Corte de cabello</li>
+                <li>Coloración</li>
+                <li>Tratamientos capilares</li>
+                <li>Maquillaje</li>
+            </ul>
+        </section>
+
+        <!-- Galería de imágenes -->
+        <section id="gallery">
+            <h2>Nuestra Galería</h2>
+            <div class="gallery">
+                <img src="./img/cortepelo.jpg" alt="Corte de cabello">
+                <img src="./img/coloracion.jpg" alt="Coloración">
+                <img src="./img/tratamientocapilar.jpg" alt="Tratamiento capilar">
+                <img src="./img/maquillaje2.jpeg" alt="Maquillaje">
+            </div>
+        </section>
+
+        <!-- Formulario de contacto -->
+        <section id="contact">
+            <h2 align="center">Contacto</h2>
+            <p align="center">¡Contáctanos para pedir tu cita!</p>
+            <form id="appointmentForm">
+                <input type="text" placeholder="Nombre" required>
+                <input type="email" placeholder="Correo Electrónico" required>
+                <input type="tel" placeholder="Teléfono" required>
+                
+                <!-- Campo para seleccionar la fecha -->
+                <label for="date">Fecha:</label>
+                <input type="date" id="date" required>
+        
+                <!-- Campo para seleccionar la hora -->
+                <label for="time">Hora:</label>
+                <select id="time" required>
+                    <option value="" disabled selected>Selecciona una hora</option>
+                    <option value="09:00">09:00 AM</option>
+                    <option value="10:00">10:00 AM</option>
+                    <option value="11:00">11:00 AM</option>
+                    <option value="12:00">12:00 PM</option>
+                    <option value="13:00">01:00 PM</option>
+                    <option value="14:00">02:00 PM</option>
+                    <option value="15:00">03:00 PM</option>
+                    <option value="16:00">04:00 PM</option>
+                    <option value="17:00">05:00 PM</option>
+                </select>
+        
+                <button type="submit">Reservar Cita</button>
+            </form>
+        
+            <br>
+            <br>
+            <br>
+            <p>Email: contacto@peluqueriaoriginal.com</p>
+            <p>Teléfono: +34 123 456 789</p>
+        </section>
+        
+        <!-- Ventana emergente -->
+        <div id="popup" class="popup" style="display: none;">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup()">&times;</span>
+                <p>Tu cita ha sido realizada correctamente.</p>
+            </div>
+        </div>
+        
+    </main>
+
+    <!-- Redes Sociales -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Síguenos en nuestras redes sociales:</h3>
+                <ul class="socials">
+                    <li>
+                        <a href="https://www.facebook.com" target="_blank">
+                            <img src="./img/facebook.webp" alt="Facebook" width="80" height="40"> <!-- Icono de Facebook -->
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com" target="_blank">
+                            <img src="./img/instagram.svg" alt="Instagram" width="40" height="40"> <!-- Icono de Instagram -->
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com" target="_blank">
+                            <img src="./img/tweeter.png" alt="Twitter" width="40" height="40"> <!-- Icono de Twitter -->
+                        </a>
+                    </li>
+                </ul>
+            </div>
+    
+            <div class="footer-col">
+                <h3>Información</h3>
+                <ul>
+                    <li><a href="./nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                    <li><a href="./servicios.html">Servicios</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-col">
+                <h3>Contáctanos</h3>
+                <p>Email: contacto@peluqueriaoriginal.com</p>
+                <p>Teléfono: +34 123 456 789</p>
+            </div>
+        </div>
+    </footer>
+    
+    <style>
+    footer {
+        background-color: #333;
+        color: #fff;
+        padding: 2rem 0;
+    }
+    
+    .footer-container {
+        display: flex;
+        justify-content: space-around;
+        max-width: 1200px; /* Ancho máximo del footer */
+        margin: auto; /* Centrar el footer */
+    }
+    
+    .footer-col {
+        flex: 1; /* Hacer que cada columna ocupe el mismo espacio */
+        padding: 0 20px; /* Espaciado interno */
+    }
+    
+    .footer-col h3 {
+        margin-bottom: 1rem; /* Espacio debajo del título */
+        font-size: 1.2rem; /* Tamaño del texto */
+    }
+    
+    .socials {
+        list-style: none;
+        display: flex;
+        justify-content: flex-start; /* Alinear a la izquierda */
+        gap: 1rem;
+        padding: 0; /* Eliminar padding para centrar mejor */
+    }
+    
+    .socials a img {
+        transition: transform 0.3s ease; /* Efecto de transición */
+    }
+    
+    .socials a:hover img {
+        transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+    }
+    
+    .footer-col ul {
+        list-style: none;
+        padding: 0; /* Eliminar padding */
+    }
+    
+    .footer-col ul li {
+        margin-bottom: 0.5rem; /* Espacio entre enlaces */
+    }
+    
+    .footer-col ul li a {
+        color: #fff; /* Color de los enlaces */
+        text-decoration: none; /* Sin subrayado */
+    }
+    
+    .footer-col ul li a:hover {
+        text-decoration: underline; /* Subrayar al pasar el mouse */
+    }
+    </style>
+</body>
+</html>

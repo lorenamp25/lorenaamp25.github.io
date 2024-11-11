@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         *´{
+        box-sizing: border-box;
+
+
+    }
+    body{
+        background-image: radial-gradient(#5a5753, #090808);
+    }
+    /* Nav bar */
+    nav{
+        height: 10vh;
+        background-color: grey;
+        display:flex;
+        justify-content: space-between;
+       align-items: strech; 
+      
+        padding: 10px;
+    }
+    .logo{
+        flex-basis: auto;
+        flex-grow: 1;
+        flex-shrink: 2;
+        background-color: aqua;
+        align-content: center;
+    }
+    .titulo{flex-grow: 2;
+    background-color: aquamarine;
+    align-content: center;}
+    .buscador{flex-grow: 1;
+    background-color: aqua;
+    align-content: center;}
+    /* Main*/
+    main {
+     /*  height: 80vh;*/
+        background: rgb(26, 28, 26);
+      /*  overflow:scroll;*/
+      
+    }
+    
+    
+    footer{
+        height:10vh;
+        background-color: grey;
+        display:flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+  
+    .columna1, .columna2, .columna1{
+        padding: 10px;
+    }
+   /*footer */
+   .container{
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: auto;
+    width: 80%;
+    flex-wrap: 2;
+      } 
+      /*Card */
+    .card{
+        width: 23% ;
+      /*  height: 300px;*/
+        border: 5px;
+        margin:10px;
+        background-color: aliceblue;
+        box-shadow: 5px 5px rgb(86, 85, 80);
+        border-radius: 5px;
+        padding-bottom: 10px;
+        flex-basis:250px;
+      }
+      .card-body{
+        padding-left: 10px;
+      }
+      .card-action{
+        display:flex;
+        justify-content:center;
+        margin-right: 10px;
+        align-items: stretch;
+      }
+      /* botones*/
+      .btn{
+        background-color: grey;
+        border-radius: 5px;
+        color: aliceblue;
+
+      }
+      .btn:hover{
+        color: black;
+        box-shadow: 5px 2px  rgb(100, 98, 98);
+      }
+      .flex{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:space-evenly;
+        ;
+      }
+      @media all and (max-width: 400px){
+        footer{ 
+            flex-direction: column;
+            height:max-content;
+            display: flex;
+        }
+        .flex{
+            flex-direction: column;
+        }
+        .card{
+            width: 90%;
+        }
+        section{
+        margin:0 auto;
+    }
+    }
+    img{
+        max-width: 100%;
+    }
+    .container{
+        flex-direction: column;
+    }
+    @media all and(max-width:400px) {
+        footer{
+            flex-direction: column;
+            height: max-content;
+        }
+        
+    }
+    </style>
+</head>
+</style>
+<body>
+    <div class="container">
+    <nav>
+        <div class="logo">aqui va el logo</div>
+        <div class="titulo">aqui va el titulo</div>
+        <div class="buscador">aqui el buscador</div>
+        
+    </nav>
+    <main>
+        <section class="flex">
+        <div class="card">
+            <img src="descarga2.jpg"alt="">
+            <div class="card-body">
+                <h5>1</h5>
+                <p>lorem ipsu lore ipsu lorem ipsu lorea ipsu lorem ipsu lorem ipsua</p>
+            </div>
+            <div class="card-action">
+                <button class="btn"> action 1</button>
+                <button class="btn"> action 1</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="descarga2.jpg" alt="">
+            <div class="card-body">
+                <h5>2</h5>
+                <p>lorem ipsu lore ipsu lorem ipsu lorea ipsu lorem ipsu lorem ipsua</p>
+            </div>
+            <div class="card-action">
+                <button class="btn"> action 1</button>
+                <button class="btn"> action 1</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="descarga2.jpg" alt="">
+            <div class="card-body">
+                <h5>Title card</h5>
+                <p>lorem ipsu lore ipsu lorem ipsu lorea ipsu lorem ipsu lorem ipsua</p>
+            </div>
+            <div class="card-action">
+                <button class="btn"> action 1</button>
+                <button class="btn"> action 1</button>
+            </div>
+        </div> <div class="card">
+            <img src="descarga2.jpg" alt="">
+            <div class="card-body">
+                <h5>Title card</h5>
+                <p>lorem ipsu lore ipsu lorem ipsu lorea ipsu lorem ipsu lorem ipsua</p>
+            </div>
+            <div class="card-action">
+                <button class="btn"> action 1</button>
+                <button class="btn"> action 1</button>
+            </div>
+        </div> <div class="card">
+            <img src="descarga2.jpg" alt="">
+            <div class="card-body">
+                <h5>Title card</h5>
+                <p>lorem ipsu lore ipsu lorem ipsu lorea ipsu lorem ipsu lorem ipsua</p>
+            </div>
+            <div class="card-action">
+                <button class="btn"> action 1</button>
+                <button class="btn"> action 1</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="descarga2.jpg"alt="">
+            <div class="card-body">
+                <h5>Title card</h5>
+                <p>lorem ipsu lore ipsu lorem ipsu lorea ipsu lorem ipsu lorem ipsua</p>
+            </div>
+            <div class="card-action">
+                <button class="btn"> action 1</button>
+                <button class="btn"> action 1</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="descarga2.jpg" alt="">
+            <div class="card-body">
+                <h5>Title card</h5>
+                <p>lorem ipsu lore ipsu lorem ipsu lorea ipsu lorem ipsu lorem ipsua</p>
+            </div>
+            <div class="card-action">
+                <button class="btn"> action 1</button>
+                <button class="btn"> action 1</button>
+            </div>
+        </div><div class="card">
+            <img src="descarga2.jpg" alt="">
+            <div class="card-body">
+                <h5>Title card</h5>
+                <p>lorem ipsu lore ipsu lorem ipsu lorea ipsu lorem ipsu lorem ipsua</p>
+            </div>
+            <div class="card-action">
+                <button class="btn"> action 1</button>
+                <button class="btn"> action 1</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="descarga2.jpg" alt="">
+            <div class="card-body">
+                <h5>Title card</h5>
+                <p>lorem ipsu lore ipsu lorem ipsu lorea ipsu lorem ipsu lorem ipsua</p>
+            </div>
+            <div class="card-action">
+                <button class="btn"> action 1</button>
+                <button class="btn"> action 1</button>
+            </div>
+            
+        </div><div class="card">
+            <img src="descarga2.jpg" alt="">
+            <div class="card-body">
+                <h5>Title card</h5>
+                <p>lorem ipsu lore ipsu lorem ipsu lorea ipsu lorem ipsu lorem ipsua</p>
+            </div>
+            <div class="card-action">
+                <button class="btn"> action 1</button>
+                <button class="btn"> action 1</button>
+            </div>
+        </div><div class="card">
+            <img src="descarga2.jpg"alt="">
+            <div class="card-body">
+                <h5>Title card</h5>
+                <p>lorem ipsu lore ipsu lorem ipsu lorea ipsu lorem ipsu lorem ipsua</p>
+            </div>
+            <div class="descarga2.jpg">
+                <button class="btn"> action 1</button>
+                <button class="btn"> action 1</button>
+            </div>
+        </div><div class="card">
+            <img src="descarga2.jpg" alt="">
+            <div class="card-body">
+                <h5>Title card</h5>
+                <p>lorem ipsu lore ipsu lorem ipsu lorea ipsu lorem ipsu lorem ipsua</p>
+            </div>
+            <div class="card-action">
+                <button class="btn"> action 1</button>
+                <button class="btn"> action 1</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="descarga2.jpg" alt="">
+            <div class="card-body">
+                <h5>ESTA ES MI CARD</h5>
+                <p>lorem ipsu lore ipsu lorem ipsu lorea ipsu lorem ipsu lorem ipsua</p>
+            </div>
+            <div class="card-action">
+                <button class="btn"> FORMA 1</button>
+                <button class="btn"> FORMA 1</button>
+            </div>
+        </div>
+        </section>
+        
+    </main>
+    </main>
+    <footer>
+
+        <div class="columna1">En columna 1</div>
+        <div class="columna2">donde estamos</div>
+        <div class="columna3">Redes sociales</div>
+    </footer>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio 2</title>
+
+    <!-- Bootstrap CSS para Alertas y estilo general -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome para íconos de redes sociales -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <style>
+        /* Estilos generales */
+        :root {
+            --color-primary: #1f72cc;   /* Color Bootstrap Primary */
+            --color-secondary: #6c757d; /* Color Bootstrap Secondary */
+            --color-danger: #dc3545;    /* Color Bootstrap Danger */
+            --color-success: #28a745;   /* Color Bootstrap Success */
+            --tamaño-boton: 60px;       /* Tamaño de los botones */
+        }
+
+        /* Estilos generales de la página */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        /* Estilos para el contenedor de botones */
+        .contenedor {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        /* Estilos para los botones rectangulares */
+        .btn-rectangular {
+            width: auto;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* Botones con colores de Bootstrap */
+        .btn-primary {
+            background-color: var(--color-primary);
+        }
+
+        .btn-secundary {
+            background-color: var(--color-secondary);
+        }
+
+        .btn-terciary{
+            background-color: var(--color-success);
+        }
+
+        .btn-danger{
+            background-color: var(--color-danger);
+        }
+
+        /* Estilos para las alertas */
+        .alert {
+            border: 2px solid;
+            border-radius: 5px;
+            position: relative;
+            margin-bottom: 10px;
+            color: black; /* Color del texto dentro de la alerta */
+        }
+
+        .alerta-primary {
+            border-color: var(--color-primary);
+            background-color: var(--color-primary);
+            color: white;
+        }
+
+        .alerta-secondary {
+            border-color: var(--color-secondary);
+            background-color: var(--color-secondary);
+            color: white;
+        }
+
+        .alerta-danger {
+            border-color: var(--color-danger);
+            background-color: var(--color-danger);
+            color: white;
+        }
+
+        .alerta-success {
+            border-color: var(--color-success);
+            background-color: var(--color-success);
+            color: white;
+        }
+
+        /* Estilo para el ícono de cerrar */
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            font-size: 18px;
+            color: inherit;
+            cursor: pointer;
+        }
+
+        .close-btn:hover {
+            color: #000;
+        }
+
+        /* Estilos para las cards */
+        .card-custom {
+            width: 18rem;
+            margin: 0 10px;
+        }
+
+        /* Estilos para los botones de redes sociales */
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-buttons a {
+            background-color: #3b5998; /* Color de fondo de Facebook */
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .social-buttons a.instagram {
+            background-color: #e4405f; /* Color de fondo de Instagram */
+        }
+
+        .social-buttons a.twitter {
+            background-color: #55acee; /* Color de fondo de Twitter */
+        }
+
+        .social-buttons a:hover {
+            opacity: 0.7;
+        }
+
+        /* Estilos del sidebar (menú lateral) */
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #000000;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            z-index: 1000;
+        }
+
+        .sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: #f31396;
+        }
+
+        .sidebar .close-btn {
+            position: absolute;
+            top: 2;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        /* Estilos para el botón del menú lateral */
+        .open-btn {
+            font-size: 30px;
+            color: var(--color-primary);
+            cursor: pointer;
+            z-index: 1050;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Botón para abrir el menú lateral -->
+    <span class="open-btn" onclick="openSidebar()"><i class="fas fa-bars"></i></span>
+
+    <!-- Menú lateral (sidebar) -->
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="close-btn" onclick="closeSidebar()">&times;</a>
+        <a href="#">Inicio</a>
+        <a href="#">Características</a>
+        <a href="#">Precios</a>
+        <a href="#">Contacto</a>
+    </div>
+
+    <H1 align="center">EJERCICIO 2 COMPONENTES</H1>
+    
+    <!-- Contenedor de botones rectangulares -->
+    <div class="contenedor">
+        <button class="btn btn-primary btn-rectangular">1</button>
+        <button class="btn btn-secundary btn-rectangular">2</button>
+        <button class="btn btn-terciary btn-rectangular">3</button>
+        <button class="btn btn-danger btn-rectangular">4</button>
+    </div>
+
+    <!-- Sección de alertas -->
+    <div class="alertas-container">
+        <!-- Alerta de éxito -->
+        <div class="alert alert-success" role="alert">
+            <span>Esto es una alerta de éxito.</span>
+            <button class="close-btn" onclick="this.parentElement.style.display='none'"><i class="fas fa-times"></i></button>
+        </div>
+
+        <!-- Alerta de advertencia -->
+        <div class="alert alert-primary" role="alert">
+            <span>Esto es una alerta primaria.</span>
+            <button class="close-btn" onclick="this.parentElement.style.display='none'"><i class="fas fa-times"></i></button>
+        </div>
+
+        <!-- Alerta de error -->
+        <div class="alert alert-danger" role="alert">
+            <span>Esto es una alerta de error.</span>
+            <button class="close-btn" onclick="this.parentElement.style.display='none'"><i class="fas fa-times"></i></button>
+        </div>
+    </div>
+
+    <!-- Sección de botones Siguiente y Anterior -->
+    <div class="d-flex justify-content-between" style="margin-bottom: 30px;">
+        <button class="btn btn-secondary btn-rectangular">Previo</button>
+        <button class="btn btn-primary btn-rectangular">Siguiente</button>
+    </div>
+
+    <!-- Sección de Cards -->
+    <div class="d-flex">
+        <div class="card card-custom">
+            <img src="https://media.istockphoto.com/id/636379014/es/foto/manos-la-formaci%C3%B3n-de-una-forma-de-coraz%C3%B3n-con-silueta-al-atardecer.jpg?s=612x612&w=0&k=20&c=R2BE-RgICBnTUjmxB8K9U0wTkNoCKZRi-Jjge8o_OgE=" class="card-img-top" alt="Imagen 1">
+            <div class="card-body">
+                <h5 class="card-title">Card 1</h5>
+                <p class="card-text">Esta es una tarjeta de ejemplo con un texto de descripción.</p>
+                <a href="#" class="btn btn-primary btn-rectangular">Ir a Card 1</a>
+            </div>
+        </div>
+
+        <div class="card card-custom">
+            <img src="https://www.educaciontrespuntocero.com/wp-content/uploads/2020/04/mejores-bancos-de-imagenes-gratis.jpg" class="card-img-top" alt="Imagen 2">
+            <div class="card-body">
+                <h5 class="card-title">Card 2</h5>
+                <p class="card-text">Esta es otra tarjeta de ejemplo, mostrando información diferente.</p>
+                <a href="#" class="btn btn-primary btn-rectangular">Ir a Card 2</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección de botones de redes sociales -->
+    <div class="social-buttons">
+        <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+    </div>
+
+    <!-- Bootstrap JS (para alertas y navbar) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script para abrir y cerrar el menú lateral -->
+    <script>
+        function openSidebar() {
+            document.getElementById("mySidebar").style.width = "250px";
+        }
+
+        function closeSidebar() {
+            document.getElementById("mySidebar").style.width = "0";
+        }
+    </script>
+
+</body>
+</html>

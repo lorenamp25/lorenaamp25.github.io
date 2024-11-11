@@ -1,0 +1,122 @@
+/* Estilos Generales */
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+h1, h2, h5 {
+  text-align: center;
+  color: #333;
+}
+
+/* Cover */
+.cover {
+  background-image: url('../bootstrap-5.3.3-dist/img/cover-image.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  color: rgb(77, 33, 33);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cover h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+/* Spinner */
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+  margin-top: 20px;
+  color: #007bff;
+}
+
+/* Card */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  color: #007bff;
+}
+
+.card-text {
+  color: #666;
+}
+
+/* Album de Fotos */
+.container .row img {
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.container .row img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Formulario de Inicio y Registro */
+form {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+form .form-control {
+  border-radius: 5px;
+}
+
+form button {
+  margin-top: 10px;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #ccc;
+  padding-top: 30px;
+}
+
+footer h5 {
+  color: #fff;
+}
+
+footer ul.nav a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+footer ul.nav a:hover {
+  color: #007bff;
+}
+
+footer ul.list-unstyled a {
+  color: #ccc;
+  text-decoration: none;
+  margin-right: 10px;
+  transition: color 0.3s ease;
+}
+
+footer ul.list-unstyled a:hover {
+  color: #007bff;
+}
+
+footer p {
+  color: #999;
+}

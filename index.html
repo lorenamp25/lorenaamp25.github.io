@@ -1,41 +1,253 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi pagina de DIW</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Mi página de DIW</title>
+    <style>
+        /* Reset de márgenes y paddings para una mejor base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Estilos del navbar */
+        nav {
+            position: sticky;
+            top: 0;
+            width: 100%;
+            background: linear-gradient(45deg, #063df5, #00e1ff);
+            padding: 15px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            transition: background 0.5s ease;
+        }
+
+        nav:hover {
+            background: linear-gradient(45deg, #00e1ff, #001aff);
+        }
+
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .navbar-brand {
+            font-size: 2rem;
+            color: #fff;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .navbar-menu {
+            display: flex;
+            gap: 25px;
+        }
+
+        .navbar-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            text-transform: capitalize;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .navbar-menu a:hover {
+            transform: scale(1.1);
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Contenedor principal */
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #0056b3;
+            margin-bottom: 10px;
+        }
+
+        header h2 {
+            font-size: 1.5rem;
+            color: #555;
+            margin-bottom: 5px;
+        }
+
+        header h3 {
+            font-size: 1.2rem;
+            color: #777;
+            margin-bottom: 20px;
+        }
+
+        .temas {
+            text-align: center;
+        }
+
+        .temas h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .tema-item {
+            width: 250px;
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fafafa;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .tema-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .tema-item a {
+            display: block;
+            font-size: 1.2rem;
+            color: #0056b3;
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+
+        .tema-item a:hover {
+            color: #003366;
+        }
+
+        .tema-img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        hr {
+            margin: 20px 0;
+            border: 0;
+            border-top: 1px solid #ddd;
+        }
+
+        /* Estilos para el footer */
+        footer {
+            background-color: #0056b3;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            color: #ff07c9;
+        }
+
+    </style>
 </head>
 <body>
-    <h1 align="center"> Modulo De Diseño de interfaces Web </h1>
-    <h2 align="center">Lorena Martin Piñero</h2>
-    <h3 align="center">2ºDAW</h3>
-    <hr>
-<h2 align="center"> TEMAS </h2><hr>
+    <!-- Navbar original -->
+    <nav>
+        <div class="navbar-container">
+            <div class="navbar-brand">TEMAS</div>
+            <div class="navbar-menu">
+                <a href="./tema0/tema0.html">0</a>
+                <a href="./tema1/tema1.html">1</a>
+                <a href="./tema2/tema2.html">2</a>
+                <a href="./tema3/tema3.html">3</a>
+                <a href="./tema4/tema4.html">4</a>
+                <a href="./tema5/tema5.html">5</a>
+                <a href="./tema6/tema6.html">6</a>
+            </div>
+        </div>
+    </nav>
 
-  <ul>
-    <li><a href="./tema0/tema0.html">Tema 0 </a></li><br>
-      <img src="tema0.jpg" alt="navegadores" height="100" width="250"><hr>
+    <!-- Contenedor principal -->
+    <div class="container">
+        <header>
+            <h1>Modulo De Diseño de Interfaces Web</h1>
+            <h2>Lorena Martin Piñero</h2>
+            <h3>2º DAW</h3>
+        </header>
 
-    <li><a href="./tema1/tema1.html"> Tema 1 - Planificacion de interfaces gráficas </a></li><br>
-      <img src="tema1 paletas.jpg" alt="colores" height="200" width="250"><hr>
-    
-    <li><a href="./tema2/tema2.html"> Tema 2 - Uso de estilos </a></li><br>
-     <img src="tema2.jpg" alt="tema2" height="250" width="" ><hr>
+        <section class="temas">
+            <h2> TEMAS DEL CURSO</h2>
 
-    <li><a href="./tema3/tema3.html"> Tema 3 - Implantación de contenidos multimedia </a></li><br>
-      <img src="tema3.jpg" alt="colores" height="150" width=""><hr>
-    
-    <li><a href="./tema4/tema4.html"> Tema 4 - Animaciones </a></li><br>
-      <img src="tema4.gif" alt="gif animaciones" height="100" width="200" ><hr>
+            <ul>
+                <li id="tema0" class="tema-item">
+                    <a href="./tema0/tema0.html">Tema 0 - Navegadores</a>
+                    <img src="tema0.jpg" alt="Navegadores" class="tema-img">
+                </li>
+                <li id="tema1" class="tema-item">
+                    <a href="./tema1/tema1.html">Tema 1 - Planificación de interfaces gráficas</a>
+                    <img src="tema1 paletas.jpg" alt="Colores" class="tema-img">
+                </li>
+                <li id="tema2" class="tema-item">
+                    <a href="./tema2/tema2.html">Tema 2 - Uso de estilos</a>
+                    <img src="tema2.jpg" alt="Estilos" class="tema-img">
+                </li>
+                <li id="tema3" class="tema-item">
+                    <a href="./tema3/tema3.html">Tema 3 - Implantación de contenidos multimedia</a>
+                    <img src="tema3.jpg" alt="Contenidos multimedia" class="tema-img">
+                </li>
+                <li id="tema4" class="tema-item">
+                    <a href="./tema4/tema4.html">Tema 4 - Animaciones</a>
+                    <img src="tema4.gif" alt="Animaciones" class="tema-img">
+                </li>
+                <li id="tema5" class="tema-item">
+                    <a href="./tema5/tema5.html">Tema 5 - Diseño de webs accesibles</a>
+                    <img src="tema5.jpg" alt="Web accesibles" class="tema-img">
+                </li>
+                <li id="tema6" class="tema-item">
+                    <a href="./tema6/tema6.html">Tema 6 - Implementación de la usabilidad de las webs</a>
+                    <img src="tema6.jpg" alt="Usabilidad" class="tema-img">
+                </li>
+            </ul>
+        </section>
+    </div>
 
-    <li><a href="./tema5/tema5.html"> Tema 5 - Diseño de webs accesibles </a></li><br>
-      <img src="tema5.jpg" alt="webs" height="150" width="150" ><hr>
-
-    <li><a href="./tema6/tema6.html"> Tema 6 - Implementación de la usabilidad de las webs </a></li><br>
-    <img src="tema6.jpg" alt="webs seguridad"  height="150" width="150"><hr>
-
-  </ul>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Lorena Martin Piñero. Todos los derechos reservados.</p>
+        <p><a href="mailto:lorena@example.com">Contáctame</a></p>
+    </footer>
 </body>
 </html>
