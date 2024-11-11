@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios - Peluquería Original</title>
+    <style>
+        /* Reset de estilos básicos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #a2c6e9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Estilos del encabezado */
+        header {
+            background-color: #4A4A4A;
+            padding: 1rem;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ff6347; /* Color al pasar el mouse */
+        }
+
+        /* Botón de Iniciar Sesión */
+        .login-btn {
+            background-color: #ff6347;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .login-btn:hover {
+            background-color: #ff4500;
+        }
+
+        /* Estilos del contenido principal */
+        main {
+            max-width: 1200px;
+            margin: auto;
+            padding: 2rem;
+        }
+
+        #services h1 {
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #333;
+            font-size: 2.5rem;
+        }
+
+        #services p {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.2rem;
+        }
+
+        /* Tarjetas para los servicios */
+        .service-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 1rem 0;
+            padding: 1.5rem;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: scale(1.02);
+        }
+
+        .service-card img {
+            width: 100%; /* Ajustar al tamaño del contenedor */
+            height: auto; /* Mantener proporciones */
+            border-radius: 10px;
+            margin-bottom: 1rem; /* Espacio entre imagen y texto */
+        }
+
+        .service-card h2 {
+            color: #ff6347;
+            margin-bottom: 0.5rem; /* Espacio entre el título y la imagen */
+            font-size: 1.8rem;
+        }
+
+        /* Pie de página */
+        footer {
+            padding: 1rem;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+        }
+
+        .socials {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .socials a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .socials a:hover {
+            color: #ff6347; /* Color al pasar el mouse */
+        }
+    </style>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="peluqueria.html">Inicio</a></li>
+                <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <a href="./inicio.html" class="login-btn">Iniciar Sesión</a>
+    </header>
+
+    <main>
+        <section id="services">
+            <h1>Servicios</h1>
+            <p>Ofrecemos una variedad de servicios para realzar tu belleza y bienestar. Descubre lo que podemos hacer por ti:</p>
+
+            <div class="service-card">
+                <h2>Corte de Cabello</h2>
+                <img src="./img/cortedecabellos2.png" alt="Corte de Cabello">
+                <p>Disfruta de un corte de cabello moderno y personalizado según tu estilo y preferencias.</p>
+            </div>
+
+            <div class="service-card">
+                <h2>Coloración</h2>
+                <img src="./img/coloracions2.jpg" alt="Coloración">
+                <p>Transforma tu look con nuestras técnicas de coloración, desde mechas sutiles hasta colores vibrantes.</p>
+            </div>
+
+            <div class="service-card">
+                <h2>Tratamientos Capilares</h2>
+                <img src="./img/tratamientocapilars2.webp" alt="Tratamientos Capilares">
+                <p>Mima tu cabello con nuestros tratamientos revitalizantes, ideales para cualquier tipo de cabello.</p>
+            </div>
+
+            <div class="service-card">
+                <h2>Maquillaje</h2>
+                <img src="./img/maquillajes2.webp" alt="Maquillaje">
+                <p>Prepárate para cualquier ocasión con nuestro servicio de maquillaje profesional.</p>
+            </div>
+
+            <div class="service-card">
+                <h2>Peinados Especiales</h2>
+                <img src="./img/peinadoss2.webp" alt="Peinados Especiales">
+                <p>Crea el peinado perfecto para tu evento especial, desde bodas hasta fiestas.</p>
+            </div>
+
+            <div class="service-card">
+                <h2>Depilación</h2>
+                <img src="./img/depilacion s2.png" alt="Depilación">
+                <p>Ofrecemos servicios de depilación para una piel suave y libre de vello.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Síguenos en nuestras redes sociales:</h3>
+                <ul class="socials">
+                    <li>
+                        <a href="https://www.facebook.com" target="_blank">
+                            <img src="./img/facebook.webp" alt="Facebook" width="80" height="40"> <!-- Icono de Facebook -->
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com" target="_blank">
+                            <img src="./img/instagram.svg" alt="Instagram" width="40" height="40"> <!-- Icono de Instagram -->
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com" target="_blank">
+                            <img src="./img/tweeter.png" alt="Twitter" width="40" height="40"> <!-- Icono de Twitter -->
+                        </a>
+                    </li>
+                </ul>
+            </div>
+    
+            <div class="footer-col">
+                <h3>Información</h3>
+                <ul>
+                    <li><a href="./nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                    <li><a href="./servicios.html">Servicios</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-col">
+                <h3>Contáctanos</h3>
+                <p>Email: contacto@peluqueriaoriginal.com</p>
+                <p>Teléfono: +34 123 456 789</p>
+            </div>
+        </div>
+    </footer>
+    
+    <style>
+    footer {
+        background-color: #333;
+        color: #fff;
+        padding: 2rem 0;
+    }
+    
+    .footer-container {
+        display: flex;
+        justify-content: space-around;
+        max-width: 1200px; /* Ancho máximo del footer */
+        margin: auto; /* Centrar el footer */
+    }
+    
+    .footer-col {
+        flex: 1; /* Hacer que cada columna ocupe el mismo espacio */
+        padding: 0 20px; /* Espaciado interno */
+    }
+    
+    .footer-col h3 {
+        margin-bottom: 1rem; /* Espacio debajo del título */
+        font-size: 1.2rem; /* Tamaño del texto */
+    }
+    
+    .socials {
+        list-style: none;
+        display: flex;
+        justify-content: flex-start; /* Alinear a la izquierda */
+        gap: 1rem;
+        padding: 0; /* Eliminar padding para centrar mejor */
+    }
+    
+    .socials a img {
+        transition: transform 0.3s ease; /* Efecto de transición */
+    }
+    
+    .socials a:hover img {
+        transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+    }
+    
+    .footer-col ul {
+        list-style: none;
+        padding: 0; /* Eliminar padding */
+    }
+    
+    .footer-col ul li {
+        margin-bottom: 0.5rem; /* Espacio entre enlaces */
+    }
+    
+    .footer-col ul li a {
+        color: #fff; /* Color de los enlaces */
+        text-decoration: none; /* Sin subrayado */
+    }
+    
+    .footer-col ul li a:hover {
+        text-decoration: underline; /* Subrayar al pasar el mouse */
+    }
+    </style>
+</body>
+</html>

@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros - Peluquería Original</title>
+    <style>
+        /* Reset de estilos básicos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Estilos del encabezado */
+        header {
+            background-color: #4A4A4A;
+            padding: 1rem;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Menú de navegación centrado */
+        nav {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ff6347; /* Color al pasar el mouse */
+        }
+
+        /* Botón de Iniciar Sesión */
+        .login-btn {
+            background-color: #ff6347;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .login-btn:hover {
+            background-color: #ff4500;
+        }
+
+        /* Animación de fade-in */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s ease-in forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Animación de desplazamiento */
+        .slide-in {
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: slideIn 0.5s ease forwards;
+        }
+
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Sección principal */
+        .content {
+            max-width: 1200px;
+            margin: auto;
+            padding: 2rem;
+        }
+
+        .content h2 {
+            font-size: 2.5rem;
+            color: #f07070;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        /* Sección "Nuestra Historia" */
+        .history {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .history p {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+            color: #0c0c0c;
+        }
+
+        /* Equipo de estilistas */
+        .team {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .team-member {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+            transition: transform 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .team-member:hover {
+            transform: scale(1.05); /* Efecto de escalado */
+        }
+
+        /* Estilos para los miembros del equipo */
+        .team-member img {
+            width: 100%; /* Ancho completo */
+            height: 200px; /* Altura fija para hacerlas más grandes */
+            object-fit: cover; /* Mantiene la proporción y recorta si es necesario */
+            border-radius: 0; /* Elimina el redondeo para hacerlas cuadradas */
+            transition: opacity 0.3s;
+        }
+
+        .team-member h3 {
+            margin-top: 1rem;
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .team-member p {
+            font-size: 1rem;
+            color: #777;
+        }
+
+        /* Valores y Filosofía */
+        .values {
+            background-color: #333;
+            color: #fff;
+            padding: 2rem 1rem;
+            border-radius: 10px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .values h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .values p {
+            margin: 0.5rem 0;
+        }
+
+        /* Línea de tiempo */
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 1rem 0;
+        }
+
+        .timeline-item:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-item .timeline-content {
+            max-width: 500px;
+        }
+
+        .timeline-item h4 {
+            font-size: 1.4rem;
+            color: #333;
+        }
+
+        .timeline-item p {
+            font-size: 1rem;
+            color: #000000;
+        }
+
+        .timeline-item img {
+            width: 500px;
+            height: 300px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 0.5s ease-in forwards;
+        }
+
+        /* Redes Sociales */
+        footer {
+            padding: 1rem;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .socials {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .socials a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease, transform 0.3s ease; /* Animación de transformación */
+        }
+
+        .socials a:hover {
+            color: #ff6347; /* Color al pasar el mouse */
+            transform: rotate(360deg); /* Rotación al pasar el mouse */
+        }
+
+        /* Animación para el fade-in en las secciones */
+        .fade-in {
+            animation: fadeIn 1s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="peluqueria.html">Inicio</a></li>
+                <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <!-- Botón de Iniciar Sesión alineado a la derecha -->
+        <a href="./inicio.html" class="login-btn">Iniciar Sesión</a>
+    </header>
+
+    <!-- Contenido principal -->
+    <div class="content">
+        <!-- Sección de historia -->
+        <section class="history fade-in">
+            <h2>Nuestra Historia</h2>
+            <p>Desde hace más de 15 años, en Peluquería Original nos hemos dedicado a crear estilos personalizados y experiencias únicas para cada cliente. Nuestra pasión por la belleza y el estilo nos ha llevado a construir un equipo de expertos que se mantienen actualizados con las últimas tendencias y técnicas.</p>
+        </section>
+
+        <!-- Sección de equipo -->
+        <section class="team fade-in">
+            <h2>Conoce a Nuestro Equipo</h2>
+            <ul class="team">
+                <li class="team-member">
+                    <img src="./img/estilista1.jpg" alt="Ana Rodríguez">
+                    <h3>Ana Rodríguez</h3>
+                    <p>Especialista en cortes y coloración</p>
+                </li>
+                <li class="team-member">
+                    <img src="./img/estilista2.jpg" alt="Carlos Gómez">
+                    <h3>Carlos Gómez</h3>
+                    <p>Experto en peinados y maquillaje</p>
+                </li>
+                <li class="team-member">
+                    <img src="./img/estilista4.jpeg" alt="María Pérez">
+                    <h3>María Pérez</h3>
+                    <p>Estilista y asesora de imagen</p>
+                </li>
+                <li class="team-member">
+                    <img src="./img/estilista3.jpeg" alt="Luis Martínez">
+                    <h3>Luis Martínez</h3>
+                    <p>Barbero y especialista en tendencias</p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Sección de valores -->
+        <section class="values fade-in">
+            <h2>Nuestra Filosofía</h2>
+            <p>En Peluquería Original valoramos la creatividad, el compromiso y la atención al detalle. Nos esforzamos en hacer que cada cliente se sienta único y especial.</p>
+            <div class="values-list">
+                <h3>Valores:</h3>
+                <p>💇 Innovación en cada estilo</p>
+                <p>💼 Compromiso con la calidad</p>
+                <p>🌍 Responsabilidad social</p>
+            </div>
+        </section>
+
+        <!-- Línea de tiempo -->
+        <section class="timeline fade-in">
+            <h2>Hitos de Nuestra Trayectoria</h2>
+            <div class="timeline-item">
+                <img src="./img/aperturapeluqueria.jpg" alt="Apertura de la peluquería">
+                <div class="timeline-content">
+                    <h4>2008 - Apertura de Nuestro Primer Local</h4>
+                    <p>Comenzamos nuestra aventura en el mundo de la peluquería con un pequeño local y grandes sueños.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <img src="./img/expansion.jpg" alt="Expansión">
+                <div class="timeline-content">
+                    <h4>2015 - Expansión y Nuevos Servicios</h4>
+                    <p>Añadimos nuevos servicios y ampliamos nuestras instalaciones para atender a más clientes.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <img src="./img/premioexcelencia.webp" alt="Premios">
+                <div class="timeline-content">
+                    <h4>2020 - Reconocimientos en la Industria</h4>
+                    <p>Recibimos premios por nuestra calidad de servicio y por nuestra dedicación al arte de la peluquería.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Síguenos en nuestras redes sociales:</h3>
+                <ul class="socials">
+                    <li>
+                        <a href="https://www.facebook.com" target="_blank">
+                            <img src="./img/facebook.webp" alt="Facebook" width="80" height="40"> <!-- Icono de Facebook -->
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com" target="_blank">
+                            <img src="./img/instagram.svg" alt="Instagram" width="40" height="40"> <!-- Icono de Instagram -->
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com" target="_blank">
+                            <img src="./img/tweeter.png" alt="Twitter" width="40" height="40"> <!-- Icono de Twitter -->
+                        </a>
+                    </li>
+                </ul>
+            </div>
+    
+            <div class="footer-col">
+                <h3>Información</h3>
+                <ul>
+                    <li><a href="./nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                    <li><a href="./servicios.html">Servicios</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-col">
+                <h3>Contáctanos</h3>
+                <p>Email: contacto@peluqueriaoriginal.com</p>
+                <p>Teléfono: +34 123 456 789</p>
+            </div>
+        </div>
+    </footer>
+    
+    <style>
+    footer {
+        background-color: #333;
+        color: #fff;
+        padding: 2rem 0;
+    }
+    
+    .footer-container {
+        display: flex;
+        justify-content: space-around;
+        max-width: 1200px; /* Ancho máximo del footer */
+        margin: auto; /* Centrar el footer */
+    }
+    
+    .footer-col {
+        flex: 1; /* Hacer que cada columna ocupe el mismo espacio */
+        padding: 0 20px; /* Espaciado interno */
+    }
+    
+    .footer-col h3 {
+        margin-bottom: 1rem; /* Espacio debajo del título */
+        font-size: 1.2rem; /* Tamaño del texto */
+    }
+    
+    .socials {
+        list-style: none;
+        display: flex;
+        justify-content: flex-start; /* Alinear a la izquierda */
+        gap: 1rem;
+        padding: 0; /* Eliminar padding para centrar mejor */
+    }
+    
+    .socials a img {
+        transition: transform 0.3s ease; /* Efecto de transición */
+    }
+    
+    .socials a:hover img {
+        transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+    }
+    
+    .footer-col ul {
+        list-style: none;
+        padding: 0; /* Eliminar padding */
+    }
+    
+    .footer-col ul li {
+        margin-bottom: 0.5rem; /* Espacio entre enlaces */
+    }
+    
+    .footer-col ul li a {
+        color: #fff; /* Color de los enlaces */
+        text-decoration: none; /* Sin subrayado */
+    }
+    
+    .footer-col ul li a:hover {
+        text-decoration: underline; /* Subrayar al pasar el mouse */
+    }
+    </style>
+</body>
+</html>

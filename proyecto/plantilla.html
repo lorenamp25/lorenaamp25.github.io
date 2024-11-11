@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bootstrap Demo</title>
+  <link href="./css/bootstrap.css" rel="stylesheet" />
+  <style>
+    .micolor {
+      color: black;
+    }
+    .cover {
+      background-image: url('../bootstrap-5.3.3-dist/img/cover-image.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      color: rgb(201, 78, 78);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Menu</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link active" href="#">Pedir Cita</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Donde nos situamos</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Cosas que hacemos</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Tintes</a></li>
+                <li><a class="dropdown-item" href="#">Decolación</a></li>
+                <li><a class="dropdown-item" href="#">Peinados Bodas</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">BUSCAR</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <h1 align="center">PELUQUERIA SORONDO</h1>
+
+    <!-- Main -->
+
+    <!--fin de main-->
+    <!-- Footer -->
+    <footer class="py-5">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>Enlaces</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-secondary">Menu</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-secondary">Preferencia peluquero</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-secondary">Pedir cita</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Contáctanos</h5>
+          <p>Email: contacto@peluqueria.com</p>
+          <p>Teléfono: +34 123 456 789</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Síguenos</h5>
+          <ul class="list-unstyled d-flex">
+            <li class="ms-3"><a href="https://www.instagram.com/?hl=es"><img src="img/instagram.svg
+              " alt="Instagram" width="24" height="24"></a></li>
+            <li class="ms-3"><a href="https://www.facebook.com/"><img src="img/facebook.webp" alt="Facebook" width="50" height="24"></a></li>
+            <li class="ms-3"><a href="https://twitter.com/"><img src="img/tweeter.png" alt="Twitter" width="24" height="24"></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="d-flex justify-content-between py-4 border-top">
+        <p>&copy; 2024 Peluquería Sorondo. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="./js/bootstrap.bundle.js"></script>
+</body>
+</html>
+
