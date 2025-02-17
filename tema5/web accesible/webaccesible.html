@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Accesibilidad Web Avanzada</title>
+  <style>
+    /* Reset básico */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Verdana', sans-serif;
+      line-height: 1.8;
+      background: linear-gradient(to right, #f0f4f8, #d9e2ec);
+      color: #2c3e50;
+      padding: 20px;
+    }
+
+    header {
+      background: #2c7a7b;
+      color: #fff;
+      text-align: center;
+      padding: 30px 20px;
+      border-radius: 12px;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 15px;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover, nav ul li a:focus {
+      color: #81e6d9;
+      text-decoration: underline;
+    }
+
+    main {
+      margin-top: 30px;
+    }
+
+    section {
+      background: #fff;
+      margin-bottom: 30px;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    section:hover {
+      transform: translateY(-5px);
+    }
+
+    h2 {
+      font-size: 2em;
+      color: #2c7a7b;
+      margin-bottom: 15px;
+    }
+
+    p, ul li {
+      font-size: 1.2em;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+
+    form {
+      display: grid;
+      gap: 20px;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input, textarea, button {
+      padding: 12px;
+      font-size: 1em;
+      border: 2px solid #2c7a7b;
+      border-radius: 8px;
+    }
+
+    input:focus, textarea:focus, button:focus {
+      outline: none;
+      box-shadow: 0 0 8px #81e6d9;
+    }
+
+    button {
+      background: #2c7a7b;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #285e61;
+    }
+
+    .high-contrast {
+      background: #000;
+      color: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    video {
+      display: block;
+      max-width: 100%;
+      margin: 20px auto;
+    }
+
+    footer {
+      background: #2c7a7b;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      border-radius: 12px;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Explorando la Accesibilidad Web</h1>
+    <nav>
+      <ul>
+        <li><a href="#accesibilidad">Accesibilidad</a></li>
+        <li><a href="#principios">Principios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="accesibilidad">
+      <h2>¿Por qué es importante la accesibilidad web?</h2>
+      <p>La accesibilidad web garantiza que todos, incluidas las personas con discapacidades, puedan utilizar los sitios web de manera eficiente.</p>
+      <img src="accesibilidad.avif" alt="Imagen que representa la accesibilidad digital">
+    </section>
+
+    <section id="principios">
+      <h2>Principios esenciales del diseño accesible</h2>
+      <ul>
+        <li><strong>Perceptible:</strong> La información debe ser visible y comprensible por todos.</li>
+        <li><strong>Operable:</strong> Los usuarios deben poder interactuar fácilmente.</li>
+        <li><strong>Comprensible:</strong> El contenido debe ser claro y entendible.</li>
+        <li><strong>Robusto:</strong> Compatible con tecnologías de asistencia y diversos dispositivos.</li>
+      </ul>
+    </section>
+
+    <section id="contacto">
+      <h2>Contáctanos</h2>
+      <form action="#" method="POST">
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+        <button type="submit">Enviar mensaje</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Modo de alto contraste</h2>
+      <p class="high-contrast">Este texto está optimizado para usuarios con baja visión.</p>
+    </section>
+
+    <section>
+      <h2>Video Accesible</h2>
+      <video controls>
+        <source src="Paisajes.mp4" type="video/mp4">
+        Tu navegador no soporta la reproducción de video.
+      </video>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Accesibilidad para Todos. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+
+</html>
