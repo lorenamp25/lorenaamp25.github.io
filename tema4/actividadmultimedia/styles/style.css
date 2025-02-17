@@ -1,0 +1,135 @@
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+    background-color:rgba(250, 200, 108, 0.897) ;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.navegador{
+    width: 100%;
+    height: 10vh;
+    background-color:rgb(226, 155, 62) ;
+    display: flex;
+    .titulo-flex{
+      width: 80%;
+    }
+    .iconos{
+        margin-left: 100px;
+    }
+    align-items: center;
+    .title{
+        text-align: center;
+        font-size: 4vh;
+        margin-right: 50px;
+    }
+    .imagenes{
+      width: 10%;
+      display: flex;
+    }
+}
+
+.card{
+    margin-top: 200px;
+    margin-bottom: 200px;
+    width: 700px;
+    height: 500px;
+    border-radius: 3px;
+    border: 2px solid black;
+    box-shadow: 1px 6px 7px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+    
+  .video{
+    width: 600px;
+  }
+
+}
+.imagenes-card{
+  width: 600px;
+}
+.imagenes-card:hover{
+transform: rotate(200deg) scale(1.5);
+transition-duration: 3s;
+}
+
+.parallax {
+
+    background-image: url("/img/cover-1196154_1280.jpg");
+    min-height: 300px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 100%;
+  }
+
+
+
+  .parallax2 {
+
+    background-image: url("/img/wines-1761613_1280.jpg");
+    min-height: 300px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 100%;
+  }
+
+  footer{
+    position: fixed;
+    bottom: 0;
+    height: 10vh;
+    width: 100%;
+    background-color: #ffb619;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .animacion-imagen{
+
+    width: 200px;
+    position: relative;
+    animation: copa 3s infinite;
+  }
+  .animacion-imagen2{
+
+    height: 200px;
+    position: relative;
+    animation: copa2 3s infinite;
+  }
+
+
+  @keyframes copa {
+      0%{
+        transform: rotate(180deg);  
+      }
+      25%{transform: rotate(200deg) scale(1.2);
+      
+      }
+      100%{
+        transform: rotate(360deg) scale(1.6);
+      }
+  }
+
+  @keyframes copa2 {
+    0%{
+      transform:translatex(0px);
+    }
+    25%{
+      transform: translatey(50px);
+    }
+    100%{
+      transform: translate3d(200px)
+    }
+    
+}
+
+
+  
